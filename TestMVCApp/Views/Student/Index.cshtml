@@ -1,0 +1,19 @@
+@model List<Student>
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h1>Students</h1>
+
+<ul class="list-group">
+    @foreach (Student student in Model)
+    {
+        <li class="list-group-item">
+            <a asp-action="details" asp-controller="student" asp-route-id="@student.Id">@student</a>
+        </li>
+    }
+</ul>
+
+@*<p>@ViewBag.Student</p>
+<p>@ViewData["Stu"]</p>
+<p>@TempData["Teacher"]</p>*@
