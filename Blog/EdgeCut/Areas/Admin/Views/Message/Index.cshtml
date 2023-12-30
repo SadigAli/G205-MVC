@@ -1,0 +1,127 @@
+@model List<Message>
+@{
+    ViewData["Title"] = "Messages";
+}
+
+<div class="pagetitle">
+    <h1>Messages</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="index" asp-controller="dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item active">Messages</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Messages</h5>
+
+                    <!-- Table with stripped rows -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Created Time</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (Message message in Model)
+                            {
+                                <tr class="@(!(bool)message.IsRead ? "bg-warning" : "")">
+                                    <th scope="row">@message.Id</th>
+                                    <td>@message.Name</td>
+                                    <td>@message.Email</td>
+                                    <td>@message.Phone</td>
+                                    <td>@message.CreatedAt?.ToString("dd/MM/yyyy")</td>
+                                    <td>
+                                        <a class="btn btn-info" asp-action="details" asp-route-id="@message.Id">
+                                            <i class="bx bx-info-circle"></i>
+                                        </a>
+                                        <a onclick="deleteItem(@message.Id)" class="btn btn-danger" asp-action="delete" asp-route-id="@message.Id">
+                                            <i class="bx bx-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <!-- End Table with stripped rows -->
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+</section>
+
+@section JS{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        // delete item
+        function deleteItem(id) {
+            event.preventDefault();
+            let url = `/admin/message/delete/${id}`;
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: "btn btn-success",
+                    cancelButton: "btn btn-danger"
+                },
+                buttonsStyling: false
+            });
+            swalWithBootstrapButtons.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel!",
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data.status == true) {
+                                swalWithBootstrapButtons.fire({
+                                    title: "Deleted!",
+                                    text: data.message,
+                                    icon: "success"
+                                });
+                                setTimeout(() => window.location.reload(), 1000);
+                            } else {
+                                swalWithBootstrapButtons.fire({
+                                    title: "Deleted!",
+                                    text: data.message,
+                                    icon: "error"
+                                });
+                            }
+                        });
+
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire({
+                        title: "Cancelled",
+                        text: "Your furniure didn't deleted:)",
+                        icon: "error"
+                    });
+                }
+            });
+
+        }
+    </script>
+}

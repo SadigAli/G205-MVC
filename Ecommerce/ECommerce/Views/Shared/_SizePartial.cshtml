@@ -1,0 +1,12 @@
+@model List<ProductColorSizeDTO>
+@{
+    Layout = null;
+}
+
+@foreach (ProductColorSizeDTO size in Model)
+{
+    <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="size-@size.Id" value="@size.Id" name="size">
+        <label class="custom-control-label" for="size-@size.Id">@size.Name</label>
+    </div>
+}

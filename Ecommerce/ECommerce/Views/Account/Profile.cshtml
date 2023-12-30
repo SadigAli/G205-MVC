@@ -1,0 +1,157 @@
+@inject UserManager<AppUser> usermanager;
+@model ProfileDTO
+@{
+    ViewData["Title"] = "Profile";
+    AppUser user = await usermanager.FindByNameAsync(User.Identity.Name);
+}
+
+<!-- Page Header Start -->
+<div class="container-fluid bg-secondary mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h1 class="font-weight-semi-bold text-uppercase mb-3">Contact Us</h1>
+        <div class="d-inline-flex">
+            <p class="m-0"><a href="">Home</a></p>
+            <p class="m-0 px-2">-</p>
+            <p class="m-0">Dashboard</p>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<div class="container-fluid my-5">
+    <div class="row">
+        <div class="col-4">
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-profile-list" data-toggle="list"
+                   href="#list-profile" role="tab" aria-controls="profile">Profile</a>
+                <a class="list-group-item list-group-item-action" id="list-orders-list" data-toggle="list"
+                   href="#list-orders" role="tab" aria-controls="orders">Orders</a>
+                <a class="list-group-item list-group-item-action" href="">Logout</a>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane show active fade" id="list-profile" role="tabpanel"
+                     aria-labelledby="list-profile-list">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                            @if(TempData["Message"] != null)
+                            {
+                                <div class="text-success">@TempData["Message"]</div>
+                            }
+                            <form asp-action="updateprofile" asp-controller="account" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Firstname</label>
+                                            <input asp-for="FirstName" class="form-control" value="@user.Firstname" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Lastname</label>
+                                            <input asp-for="LastName" class="form-control" value="@user.Lastname">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Email</label>
+                                            <input type="email" asp-for="Email" class="form-control" value="@user.Email" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Username</label>
+                                            <input type="text" class="form-control" asp-for="UserName" value="@user.UserName" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Address</label>
+                                            <input type="text" class="form-control" asp-for="Address" value="@user.Address" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Phone number</label>
+                                            <input type="text" class="form-control" asp-for="Phone" value="@user.Phone" >
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Current Password</label>
+                                            <input asp-for="OldPassword" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">New Password</label>
+                                            <input asp-for="NewPassword" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Confirm Password</label>
+                                            <input asp-for="ConfirmPassword" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 mb-3">
+                                        <button class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="list-orders" role="tabpanel" aria-labelledby="list-orders-list">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Count</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <img src="./img/product-1.jpg" width="60" height="60" alt="">
+                                </td>
+                                <td>Product Name</td>
+                                <td>$100</td>
+                                <td>1</td>
+                                <td>12/11/2022 09:16</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <img src="./img/product-1.jpg" width="60" height="60" alt="">
+                                </td>
+                                <td>Product Name</td>
+                                <td>$100</td>
+                                <td>1</td>
+                                <td>12/11/2022 09:16</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <img src="./img/product-1.jpg" width="60" height="60" alt="">
+                                </td>
+                                <td>Product Name</td>
+                                <td>$100</td>
+                                <td>1</td>
+                                <td>12/11/2022 09:16</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,5 +1,6 @@
 using EdgeCut.DAL;
 using EdgeCut.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace EdgeCut
@@ -15,8 +16,16 @@ namespace EdgeCut
             builder.Services.AddDbContext<ApplicationContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration.GetConnectionString("MyConnection"));
-            });
+            })
+            .AddIdentity<IdentityUser, IdentityRole>(option =>
+            {
+                option.User.RequireUniqueEmail = true;
+                option.Password.RequireDigit = true;
+                option.Password.RequireNonAlphanumeric = false;
+                option.Password.RequiredLength = 8;
+            }).AddEntityFrameworkStores<ApplicationContext>().AddDefaultTokenProviders();
             builder.Services.AddScoped<IFileService, FileService>();
+            builder.Services.AddScoped<LayoutService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -32,6 +41,7 @@ namespace EdgeCut
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllerRoute(
@@ -43,7 +53,7 @@ namespace EdgeCut
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
-            
+
 
             app.Run();
         }

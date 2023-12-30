@@ -7456,12 +7456,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\front\js\slick.min.js))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\1c27faeb-3480-4309-ad50-dd63543718daMessi.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\0008905b-c0f6-4f78-840d-0401b42962cezonaro_gatesofconst.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>EdgeCut</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EdgeCut</BasePath>
-      <RelativePath>uploads/sliders/1c27faeb-3480-4309-ad50-dd63543718daMessi.jpg</RelativePath>
+      <RelativePath>uploads/blogs/0008905b-c0f6-4f78-840d-0401b42962cezonaro_gatesofconst.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -7470,14 +7470,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\1c27faeb-3480-4309-ad50-dd63543718daMessi.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\0008905b-c0f6-4f78-840d-0401b42962cezonaro_gatesofconst.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\429841df-06cf-40be-836d-8d75ac61d07bMessi.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\735f6cb7-6a0b-4cbc-ab81-aeaedbc81248b1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>EdgeCut</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EdgeCut</BasePath>
-      <RelativePath>uploads/sliders/429841df-06cf-40be-836d-8d75ac61d07bMessi.jpg</RelativePath>
+      <RelativePath>uploads/blogs/735f6cb7-6a0b-4cbc-ab81-aeaedbc81248b1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -7486,14 +7486,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\429841df-06cf-40be-836d-8d75ac61d07bMessi.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\735f6cb7-6a0b-4cbc-ab81-aeaedbc81248b1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\5e141518-cb13-41f5-bc88-42bb9fac7148Messi.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\8d9436b3-627f-4812-826e-0f3d617da3bezonaro_gatesofconst.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>EdgeCut</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EdgeCut</BasePath>
-      <RelativePath>uploads/sliders/5e141518-cb13-41f5-bc88-42bb9fac7148Messi.jpg</RelativePath>
+      <RelativePath>uploads/blogs/8d9436b3-627f-4812-826e-0f3d617da3bezonaro_gatesofconst.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -7502,14 +7502,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\5e141518-cb13-41f5-bc88-42bb9fac7148Messi.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\8d9436b3-627f-4812-826e-0f3d617da3bezonaro_gatesofconst.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\7f5a5940-56e3-47d7-8924-1439f1994a95Messi.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\d37dd862-fbac-47a2-a67a-9f736de92b41zonaro_gatesofconst.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>EdgeCut</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EdgeCut</BasePath>
-      <RelativePath>uploads/sliders/7f5a5940-56e3-47d7-8924-1439f1994a95Messi.jpg</RelativePath>
+      <RelativePath>uploads/blogs/d37dd862-fbac-47a2-a67a-9f736de92b41zonaro_gatesofconst.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -7518,14 +7518,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\7f5a5940-56e3-47d7-8924-1439f1994a95Messi.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\d37dd862-fbac-47a2-a67a-9f736de92b41zonaro_gatesofconst.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\925a77e8-8e88-465e-aaac-bdf39e4c248aMessi.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\fa816927-a1e9-436d-9a52-e840cf470379blog-img1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>EdgeCut</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EdgeCut</BasePath>
-      <RelativePath>uploads/sliders/925a77e8-8e88-465e-aaac-bdf39e4c248aMessi.jpg</RelativePath>
+      <RelativePath>uploads/blogs/fa816927-a1e9-436d-9a52-e840cf470379blog-img1.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -7534,14 +7534,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\925a77e8-8e88-465e-aaac-bdf39e4c248aMessi.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\blogs\fa816927-a1e9-436d-9a52-e840cf470379blog-img1.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\e37e857d-fa31-47d6-8389-a8db34eda0ccMessi.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\furnitures\a269241b-f56b-410e-9a33-dd245b810ed3f1.png))">
       <SourceType>Package</SourceType>
       <SourceId>EdgeCut</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EdgeCut</BasePath>
-      <RelativePath>uploads/sliders/e37e857d-fa31-47d6-8389-a8db34eda0ccMessi.jpg</RelativePath>
+      <RelativePath>uploads/furnitures/a269241b-f56b-410e-9a33-dd245b810ed3f1.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -7550,7 +7550,135 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\e37e857d-fa31-47d6-8389-a8db34eda0ccMessi.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\furnitures\a269241b-f56b-410e-9a33-dd245b810ed3f1.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\furnitures\d34951cf-180b-4378-9183-e8568b906dc5f6.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>EdgeCut</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EdgeCut</BasePath>
+      <RelativePath>uploads/furnitures/d34951cf-180b-4378-9183-e8568b906dc5f6.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\furnitures\d34951cf-180b-4378-9183-e8568b906dc5f6.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\furnitures\db94e14e-5893-41a3-b2e8-6bc6c8be72d1f4.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>EdgeCut</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EdgeCut</BasePath>
+      <RelativePath>uploads/furnitures/db94e14e-5893-41a3-b2e8-6bc6c8be72d1f4.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\furnitures\db94e14e-5893-41a3-b2e8-6bc6c8be72d1f4.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\settings\afd8e081-2d10-4203-bc49-a08efce1007cabout-img.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>EdgeCut</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EdgeCut</BasePath>
+      <RelativePath>uploads/settings/afd8e081-2d10-4203-bc49-a08efce1007cabout-img.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\settings\afd8e081-2d10-4203-bc49-a08efce1007cabout-img.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\297e74c4-7bc3-485e-8844-e6aef35d8b68slider-img.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>EdgeCut</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EdgeCut</BasePath>
+      <RelativePath>uploads/sliders/297e74c4-7bc3-485e-8844-e6aef35d8b68slider-img.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\297e74c4-7bc3-485e-8844-e6aef35d8b68slider-img.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\4b1c9892-4910-45e2-93bb-120b30fb77a5slider-img1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>EdgeCut</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EdgeCut</BasePath>
+      <RelativePath>uploads/sliders/4b1c9892-4910-45e2-93bb-120b30fb77a5slider-img1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\sliders\4b1c9892-4910-45e2-93bb-120b30fb77a5slider-img1.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\testimonials\43eed67a-d74c-466f-91a8-9ed87e2dfc7bclient.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>EdgeCut</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EdgeCut</BasePath>
+      <RelativePath>uploads/testimonials/43eed67a-d74c-466f-91a8-9ed87e2dfc7bclient.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\testimonials\43eed67a-d74c-466f-91a8-9ed87e2dfc7bclient.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\testimonials\52c99e57-f70d-4b93-95c8-8bb5a6b449a9zonaro_gatesofconst.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>EdgeCut</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EdgeCut</BasePath>
+      <RelativePath>uploads/testimonials/52c99e57-f70d-4b93-95c8-8bb5a6b449a9zonaro_gatesofconst.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\testimonials\52c99e57-f70d-4b93-95c8-8bb5a6b449a9zonaro_gatesofconst.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\testimonials\6df08c9b-9ba1-4c51-ac47-2417c3edcdfeclient.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>EdgeCut</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EdgeCut</BasePath>
+      <RelativePath>uploads/testimonials/6df08c9b-9ba1-4c51-ac47-2417c3edcdfeclient.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\testimonials\6df08c9b-9ba1-4c51-ac47-2417c3edcdfeclient.jpg))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

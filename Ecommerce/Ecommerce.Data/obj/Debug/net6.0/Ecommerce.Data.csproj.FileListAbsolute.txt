@@ -1,0 +1,14 @@
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\bin\Debug\net6.0\Ecommerce.Data.deps.json
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\bin\Debug\net6.0\Ecommerce.Data.dll
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\bin\Debug\net6.0\Ecommerce.Data.pdb
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\Ecommerce.Data.csproj.AssemblyReference.cache
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\Ecommerce.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\Ecommerce.Data.AssemblyInfoInputs.cache
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\Ecommerce.Data.AssemblyInfo.cs
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\Ecommerce.Data.csproj.CoreCompileInputs.cache
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\Ecommerce.Data.dll
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\refint\Ecommerce.Data.dll
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\Ecommerce.Data.pdb
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\ref\Ecommerce.Data.dll
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\bin\Debug\net6.0\Ecommerce.Data.runtimeconfig.json
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Data\obj\Debug\net6.0\Ecommerce.Data.genruntimeconfig.cache

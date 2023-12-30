@@ -1,0 +1,64 @@
+@model ProductColorPostDTO
+@{
+    ViewData["Title"] = "EditProductColor";
+}
+
+<div class="pagetitle">
+    <h1>Form Validation</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="index" asp-controller="dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item"><a asp-action="index">Products</a></li>
+            <li class="breadcrumb-item active">Create</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Product Create</h5>
+
+                    <!-- Custom Styled Validation -->
+                    <form method="post" class="row g-3 needs-validation" enctype="multipart/form-data">
+                        <div class="col-md-12">
+                            <label class="form-label">Sizes</label>
+                            <select class="form-control" asp-for="SizeIds" multiple>
+                                @foreach (SizeGetDTO size in ViewBag.Sizes)
+                                {
+                                    <option value="@size.Id">@size.Name</option>
+                                }
+                            </select>
+                            <span asp-validation-for="SizeIds" class="invalid-feedback" style="display:block">
+
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form><!-- End Custom Styled Validation -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@section CSS{
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    
+}
+
+@section JS{
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').select2();
+        });
+    </script>
+}
+

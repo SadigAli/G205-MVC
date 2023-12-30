@@ -1,0 +1,52 @@
+@model CategoryGetDTO
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="pagetitle">
+    <h1>Form Validation</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="index" asp-controller="dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item"><a asp-action="index">Categories</a></li>
+            <li class="breadcrumb-item active">Edit</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Category Create</h5>
+
+                    <!-- Custom Styled Validation -->
+                    <form method="post" class="row g-3 needs-validation" enctype="multipart/form-data">
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="@Model.Name" disabled>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Slug</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="@Model.Slug" disabled>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Created At</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="@Model.CreatedAt?.ToString("dd/mm/yyyy")" disabled>
+                        </div>
+                        <div class="col-md-12">
+                            <img src="~/uploads/categories/@Model.Image" width="150" height="150" />
+                        </div>
+                        <div class="col-12">
+                            <a asp-action="index" class="btn btn-dark">Back</a>
+                        </div>
+                    </form><!-- End Custom Styled Validation -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+

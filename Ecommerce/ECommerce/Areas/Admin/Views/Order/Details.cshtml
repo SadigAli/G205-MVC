@@ -1,0 +1,24 @@
+@model Order
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h4>Order Detail</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            @foreach (OrderProduct item in Model.OrderProducts)
+            {
+                <div class="col-md-4">
+                    <p>Product : <b>@item.ProductColorSize.ProductColor.Product.Name</b></p>
+                    <p>Color : <b>@item.ProductColorSize.ProductColor.Color.Name</b></p>
+                    <p>Size : <b>@item.ProductColorSize.Size.Name</b></p>
+                    <p>Count : <b>@item.Count</b></p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

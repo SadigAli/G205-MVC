@@ -1,0 +1,17 @@
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\bin\Debug\net6.0\Ecommerce.Services.deps.json
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\bin\Debug\net6.0\Ecommerce.Services.dll
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\bin\Debug\net6.0\Ecommerce.Services.pdb
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\Ecommerce.Services.csproj.AssemblyReference.cache
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\Ecommerce.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\Ecommerce.Services.AssemblyInfoInputs.cache
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\Ecommerce.Services.AssemblyInfo.cs
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\Ecommerce.Services.csproj.CoreCompileInputs.cache
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\Ecommerce.Services.dll
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\refint\Ecommerce.Services.dll
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\Ecommerce.Services.pdb
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\ref\Ecommerce.Services.dll
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\bin\Debug\net6.0\Ecommerce.Services.runtimeconfig.json
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\Ecommerce.Services.genruntimeconfig.cache
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\bin\Debug\net6.0\Ecommerce.Data.dll
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\bin\Debug\net6.0\Ecommerce.Data.pdb
+C:\Users\sadig\OneDrive\Desktop\G205-MVC\Ecommerce\Ecommerce.Services\obj\Debug\net6.0\Ecommerce.Services.csproj.CopyComplete

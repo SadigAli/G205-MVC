@@ -1,0 +1,72 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="text-center">Send Message</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <input class="form-control" placeholder="Username..." id="username" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        <textarea class="form-control" placeholder="Message..." id="message"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary w-100" id="send-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="text-center">Messages</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group" id="message-list">
+                        <li class="list-group-item">User : Message</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/signalr/dist/browser/signalr.min.js" ></script>
+    <script>
+        let connection = new signalR.HubConnectionBuilder().withUrl("/chat").build();
+
+        document.getElementById("send-btn").disabled = true;
+        let messageList = document.getElementById('message-list');
+        let messageInput = document.getElementById('message');
+        let username = document.getElementById('username');
+
+        connection.on("receiveMessage", function (user, message) {
+            let content = `<li class="list-group-item">${user} : ${message}</li>`;
+            messageList.innerHTML += content;
+        });
+
+        connection.start().then(function () {
+            document.getElementById("send-btn").disabled = false;
+        }).catch(function (err) {
+            return console.error(err.toString());
+        });
+
+        document.getElementById("send-btn").addEventListener("click", function (event) {
+            user = username.value;
+            message = messageInput.value;
+            connection.invoke("SendMessage", user, message).catch(function (err) {
+                return console.error(err.toString());
+            });
+            event.preventDefault();
+        });
+    </script>
+}

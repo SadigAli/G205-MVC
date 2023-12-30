@@ -1,0 +1,132 @@
+@model ProductPutDTO
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="pagetitle">
+    <h1>Form Validation</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="index" asp-controller="dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item"><a asp-action="index">Products</a></li>
+            <li class="breadcrumb-item active">Create</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Product Create</h5>
+
+                    <!-- Custom Styled Validation -->
+                    <form method="post" class="row g-3 needs-validation" enctype="multipart/form-data">
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="validationCustom01" asp-for="Name">
+                            <span asp-validation-for="Name" class="invalid-feedback" style="display:block;">
+
+                            </span>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Sale Price</label>
+                            <input class="form-control" id="validationCustom01" asp-for="SalePrice">
+                            <span asp-validation-for="SalePrice" class="invalid-feedback" style="display:block;">
+
+                            </span>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="validationCustom01" class="form-label">Discount</label>
+                            <input class="form-control" id="validationCustom01" asp-for="Discount">
+                            <span asp-validation-for="Discount" class="invalid-feedback" style="display:block;">
+
+                            </span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Category</label>
+                            <select class="form-control" asp-for="CategoryId">
+                                <option>Choose a category</option>
+                                @foreach (CategoryGetDTO category in ViewBag.Categories)
+                                {
+                                    if(Model.Category == category.Name)
+                                    {
+                                        <option value="@category.Id" selected>@category.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@category.Id">@category.Name</option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="CategoryId" class="invalid-feedback" style="display:block">
+
+                            </span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Colors</label>
+                            <select class="form-control" asp-for="ColorIds" multiple>
+                                @foreach (ColorGetDTO color in ViewBag.Colors)
+                                {
+                                    if (Model.Colors.Contains(color.Name))
+                                    {
+                                        <option value="@color.Id" selected>@color.Name</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@color.Id">@color.Name</option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="ColorIds" class="invalid-feedback" style="display:block">
+
+                            </span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Poster Image</label>
+                            <input class="form-control" asp-for="PosterFile" accept=".png,.jpg" />
+                            <img src="~/uploads/products/@Model.PosterImage" width="150" height="150" />
+                            <span asp-validation-for="PosterFile" class="invalid-feedback" style="display:block">
+
+                            </span>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="form-label">Images</label>
+                            <input class="form-control" asp-for="Files" accept=".png,.jpg" multiple />
+                            @foreach (string image in Model.Images)
+                            {
+                                <img src="~/uploads/products/@image" style="margin-right: 15px" width="150" height="150" />
+
+                            }
+                            <span asp-validation-for="Files" class="invalid-feedback" style="display:block">
+
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
+                        </div>
+                    </form><!-- End Custom Styled Validation -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+@section CSS{
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+}
+
+@section JS{
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('select').select2();
+        });
+    </script>
+}
+

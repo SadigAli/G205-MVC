@@ -1,0 +1,322 @@
+@model List<ProductGetDTO>
+@{
+    ViewData["Title"] = "Index";
+    int counter = 0;
+}
+
+
+<input type="hidden" id="message" value="@TempData["Message"]" />
+<div class="pagetitle">
+    <h1>Products</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="index" asp-controller="dashboard">Dashboard</a></li>
+            <li class="breadcrumb-item active">Products</li>
+        </ol>
+    </nav>
+    <a asp-action="create" class="btn btn-primary">
+        <i class="bx bx-plus"></i>
+    </a>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Products</h5>
+                    <table class="fold-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Sale Price</th>
+                                <th>Discount</th>
+                                <th>Category</th>
+                                <th>Created At</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (ProductGetDTO item in Model)
+                            {
+                                <tr class="view">
+                                    <td>@(++counter)</td>
+                                    <td>
+                                        <img src="~/uploads/products/@item.PosterImage" width="70" height="70" />
+                                    </td>
+                                    <td>@item.Name</td>
+                                    <td class="cur">@item.SalePrice</td>
+                                    <td>@item.Discount</td>
+                                    <td>@item.Category</td>
+                                    <td>@item.CreatedAt?.ToString("dd/MM/yyyy HH:mm")</td>
+                                    <td>
+                                        <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-primary">
+                                            <i class="bx bx-edit"></i>
+                                        </a>
+                                        <a class="btn btn-danger delete" asp-action="delete" asp-route-id="@item.Id">
+                                            <i class="bx bx-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="fold">
+                                    <td colspan="7">
+                                        <div class="fold-content">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Color Name</th>
+                                                        <th>Sizes</th>
+                                                        <th>Total Count</th>
+                                                        <th>Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (ProductColorGetDTO pc in item.ProductColors)
+                                                    {
+                                                        <tr>
+                                                            <td>@pc.ColorName</td>
+                                                            <td>
+                                                                @foreach (ProductColorSizeDTO size in pc.Sizes)
+                                                                {
+                                                                    <a class="btn btn-info" asp-action="editsize" asp-route-id="@size.Id" >@size.Name</a>
+                                                                }
+                                                            </td>
+                                                            <td>@pc.TotalCount</td>
+                                                            <td>
+                                                                <a class="btn btn-dark" asp-action="editproductcolor" asp-route-id="@pc.Id">
+                                                                    <i class="bx bx-edit"></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                            
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+
+            
+
+
+
+        </div>
+
+    </div>
+</section>
+
+@section CSS{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <style>
+        @@charset "UTF-8";
+        @@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+        .pcs:after {
+            content: " pcs";
+        }
+
+        .cur:before {
+            content: "$";
+        }
+
+        .per:after {
+            content: "%";
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0.2em 2em;
+        }
+
+        table {
+            width: 100%;
+        }
+
+            table th {
+                text-align: left;
+                border-bottom: 1px solid #ccc;
+            }
+
+            table th, table td {
+                padding: 0.4em;
+            }
+
+            table.fold-table > tbody > tr.view td, table.fold-table > tbody > tr.view th {
+                cursor: pointer;
+            }
+
+                table.fold-table > tbody > tr.view td:first-child,
+                table.fold-table > tbody > tr.view th:first-child {
+                    position: relative;
+                    padding-left: 20px;
+                }
+
+                    table.fold-table > tbody > tr.view td:first-child:before,
+                    table.fold-table > tbody > tr.view th:first-child:before {
+                        position: absolute;
+                        top: 50%;
+                        left: 5px;
+                        width: 9px;
+                        height: 16px;
+                        margin-top: -8px;
+                        font: 16px fontawesome;
+                        color: #999;
+                        content: "";
+                        transition: all 0.3s ease;
+                    }
+
+            table.fold-table > tbody > tr.view:nth-child(4n-1) {
+                background: #eee;
+            }
+
+            table.fold-table > tbody > tr.view:hover {
+                background: #007bff;
+            }
+
+            table.fold-table > tbody > tr.view.open {
+                background-color: dimgrey;
+                color: white;
+            }
+
+                table.fold-table > tbody > tr.view.open td:first-child:before, table.fold-table > tbody > tr.view.open th:first-child:before {
+                    transform: rotate(-180deg);
+                    color: #333;
+                }
+
+            table.fold-table > tbody > tr.fold {
+                display: none;
+            }
+
+                table.fold-table > tbody > tr.fold.open {
+                    display: table-row;
+                }
+
+        .fold-content {
+            padding: 0.5em;
+        }
+
+            .fold-content h3 {
+                margin-top: 0;
+            }
+
+            .fold-content > table {
+                border: 2px solid #ccc;
+            }
+
+                .fold-content > table > tbody tr:nth-child(even) {
+                    background: #eee;
+                }
+    </style>
+}
+
+@section JS{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        // delete item
+        function deleteItem(id) {
+            event.preventDefault();
+            let url = `/admin/product/delete/${id}`;
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: "btn btn-success",
+                    cancelButton: "btn btn-danger"
+                },
+                buttonsStyling: false
+            });
+            swalWithBootstrapButtons.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel!",
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch(url)
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data.status == true) {
+                                swalWithBootstrapButtons.fire({
+                                    title: "Deleted!",
+                                    text: data.message,
+                                    icon: "success"
+                                });
+                                setTimeout(() => window.location.reload(), 1000);
+                            } else {
+                                swalWithBootstrapButtons.fire({
+                                    title: "Deleted!",
+                                    text: data.message,
+                                    icon: "error"
+                                });
+                            }
+                        });
+
+                } else if (
+                    /* Read more about handling dismissals below */
+                    result.dismiss === Swal.DismissReason.cancel
+                ) {
+                    swalWithBootstrapButtons.fire({
+                        title: "Cancelled",
+                        text: "Your furniure didn't deleted:)",
+                        icon: "error"
+                    });
+                }
+            });
+
+        }
+    </script>
+
+
+    <script>
+        // show toast message
+
+        let message = $('#message').val();
+
+        if (message != '') {
+            toastr["success"](message)
+
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+        }
+    </script>
+
+    <script>
+        $(function () {
+            $(".fold-table tr.view").on("click", function () {
+                $(this).toggleClass("open").next(".fold").toggleClass("open");
+            });
+        });
+    </script>
+}
+

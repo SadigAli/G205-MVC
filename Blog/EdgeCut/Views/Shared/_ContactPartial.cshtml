@@ -1,0 +1,83 @@
+@model Message
+@{
+    Layout = null;
+}
+<input id="message" type="hidden" value="@TempData["Message"]" />
+<!-- contact section -->
+<section class="contact_section  long_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <div class="heading_container">
+                        <h2>
+                            Contact Us
+                        </h2>
+                    </div>
+                    <form asp-action="sendmessage" asp-controller="contact" method="post">
+                        <div>
+                            <input type="text" placeholder="Your Name" asp-for="Name" />
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Phone Number" asp-for="Phone" />
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email" asp-for="Email" />
+                        </div>
+                        <div>
+                            <input type="text" class="message-box" placeholder="Message" asp-for="Text" />
+                        </div>
+                        <div class="btn_box">
+                            <button type="submit">
+                                SEND
+                            </butto>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="map_container">
+                    <div class="map">
+                        <div id="googleMap"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end contact section -->
+@section CSS{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+}
+
+@section JS{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        // show toast message
+
+        let message = $('#message').val();
+
+        if (message != '') {
+            toastr["success"](message)
+
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-right",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            }
+        }
+    </script>
+}
